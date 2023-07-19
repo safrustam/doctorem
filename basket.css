@@ -26,3 +26,104 @@
     text-align: center;
     color: white;
 }
+
+.modal-shop {
+    position: absolute;
+    width: 100%;
+    height: 500%;
+    background: #222222ee;
+    transition: .5s;
+    z-index: 10;
+    display: none;
+    opacity: 0;
+}
+
+.closer {
+    color: white;
+    width: 73px;
+    height: 73px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.modal-shop .panel {
+    margin: 65px auto;
+    width: 100%;
+    max-width: 560px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 40px;
+    box-sizing: border-box;
+    overflow: auto;
+    z-index: 1000;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    height: 73px;
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+.minus, .plus, .crest {
+    border: 1px solid #ddd;
+    width: 18px;
+    height: 19px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    margin: 0 7px;
+    color: #bbb
+}
+
+.quard {
+    background: #eee;
+    display: inline-block;
+    min-width: 73px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+.quard img {
+    width: 58px
+}
+
+.panel hr {
+    background: #ccc;
+    border: none;
+    height: 1px
+}
+
+.modal-shop input {
+    height: 56px;
+    width: calc(100% - 40px);
+    font-size: 16px;
+    line-height: 1.33;
+    padding: 0 20px;
+}
+
+.modal-shop button {
+    margin: 40px 0;
+    background: #222222;
+    width: calc(100% + 4px);
+    color: white;
+    height: 56px;
+    border: 1px solid black;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-shop .sum {
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    text-align: right;
+    margin: 30px 0;
+}
