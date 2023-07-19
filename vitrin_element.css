@@ -1,0 +1,83 @@
+.vitrin{
+    /*padding-top: 45px;*/
+    /*padding-bottom: 60px;*/
+    padding: 45px 205px 80px ;
+    background-color: #efefef;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap
+
+}
+
+.element{
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    margin: 20px;
+    position: relative;
+    max-width: 280px;
+}
+.el-circle{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ff4a4a;
+    position: absolute;
+    right:10px;
+    top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.element img{
+    width: 260px;
+}
+
+.frame{
+    margin: 20px;
+
+}
+
+.element .head{
+    font-size:18px;
+    color: #0e7d37;
+    font-weight: 500;
+}
+
+.element .descript{
+    margin: 8px 0;
+    font-size: 12px;
+    font-weight: 300;
+}
+.price{
+    font-size: 12px;
+    margin: 12px 0;
+}
+.price span{
+    color: red;
+    text-decoration: line-through;
+}
+.frame{
+    display: block;
+}
+.frame button{
+    font-size: 14px;
+    padding: 6px 65px;
+    border: 1px solid #1e8a16;
+    border-radius: 4px;
+    margin: 5px 0;
+    width: 100%;
+    cursor: pointer;
+}
+.frame .b_white{
+    color: #1e8a16;
+    font-weight: bold;
+    background: white;
+}
+.frame .b_green{
+    color: white;
+    font-weight: bold;
+    background: #1e8a16;
+}
+

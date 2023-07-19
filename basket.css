@@ -1,0 +1,28 @@
+.basket {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: white;
+    top: 120px;
+    right: 80px;
+    cursor: pointer;
+}
+
+.basket div {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    padding: 7px;
+}
+
+.basket-count {
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: red;
+    text-align: center;
+    color: white;
+}

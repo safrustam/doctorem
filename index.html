@@ -1,2 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="stylesheet" href="./vitrin_element.css" type="text/css">
+    <link rel="stylesheet" href="./basket.css" type="text/css">
+</head>
+<body onload="onLoad()">
+<header>
+    <nav class="menu" style="position: absolute;width: 100%">
+        <div class="maincontainer">
+            <span class="block left">
+                <span>Меню</span>
+                <span>Продукты</span>
+                <span>Оплата и доставка</span>
+            </span>
+            <span class="logo">
+                <img src="./img/logo.png">
+            </span>
+            <span class="block right">
+                <span>info@doctorem.ru</span>
+                <span>
+                    <div style="display: flex; justify-content: space-around; width: 140px">
+                      <div>
+                        <a href="https://t.me/doctoremru"
+                           target="_blank"
+                           rel="nofollow noopener"
+                           style="width: 30px; height: 30px;">
+                            <svg width="30px" height="30px" viewBox="0 0 100 100"
+                                 fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                      clip-rule="evenodd"
+                                      d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                                      fill="#000000"></path>
+                            </svg></a>
+                      </div><div>
+                        <a href="https://vk.com/doctoremru"
+                           target="_blank"
+                           rel="nofollow noopener"
+                           style="width: 30px; height: 30px;"><svg
+                                width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z"
+                                  fill="#000000"></path></svg></a>
+                    </div><div>
+                        <a href="https://ok.ru/group/70000002068952" target="_blank" rel="nofollow noopener"
+                           style="width: 30px; height: 30px;">
+                        <svg width="30px"
+                             height="30px" viewBox="0 0 100 100" fill="none"
+                             xmlns="http://www.w3.org/2000/svg"><path
+                                fill-rule="evenodd" clip-rule="evenodd"
+                                d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm13.463-63.08c0 7.688-6.233 13.92-13.92 13.92-7.688 0-13.92-6.232-13.92-13.92S41.855 23 49.543 23s13.92 6.232 13.92 13.92Zm-7.072 0a6.848 6.848 0 1 0-13.696 0 6.848 6.848 0 0 0 13.696 0Zm3.341 15.006c2.894-2.28 5.07-.967 5.856.612 1.37 2.753-.178 4.084-3.671 6.326-2.96 1.9-7.016 2.619-9.665 2.892l2.217 2.216 8.203 8.203a3.192 3.192 0 0 1 0 4.514l-.376.376a3.192 3.192 0 0 1-4.514 0l-8.203-8.203-8.203 8.203a3.192 3.192 0 0 1-4.514 0l-.376-.376a3.192 3.192 0 0 1 0-4.514l8.203-8.203 2.21-2.21c-2.648-.268-6.748-.983-9.732-2.898-3.494-2.243-5.041-3.573-3.671-6.326.786-1.579 2.963-2.892 5.855-.612 3.91 3.08 10.19 3.08 10.19 3.08s6.282 0 10.191-3.08Z"
+                                fill="#000000"></path></svg></a>
+                    </div><div>
+                        <a href="https://www.instagram.com/doctorem.ru/" target="_blank" rel="nofollow noopener"
+                           style="width: 30px; height: 30px;">
+                        <svg width="30px"
+                             height="30px" viewBox="0 0 100 100" fill="none"
+                             xmlns="http://www.w3.org/2000/svg"><path
+                                fill-rule="evenodd" clip-rule="evenodd"
+                                d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z"
+                                fill="#000000"></path></svg></a>
+                        </div>
+                    </div>
+                </span>
+            </span>
+        </div>
+    </nav>
+</header>
 
-<h1>12121221212121212121 </h1>
+<div class="basket">
+    <div>
+        <svg style="stroke: #000; padding: 12px 13px 14px;"
+             role="img" class="t706__carticon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path>
+            <path fill="none" stroke-width="2" stroke-miterlimit="10"
+                  d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path>
+        </svg>
+    </div>
+    <div class="basket-count"></div>
+</div>
+
+<div class="content">
+    <div class="main_info">
+        <img src="./img/main.png">
+        <div class="text">
+            <p>ТРАНСДЕРМАЛЬНЫЕ ПЛАСТЫРИ</p>
+            <p>
+                комплекс витаминов и минералов для Вашего здоровья в инновационной форме!
+            </p>
+            <button>Подробнее</button>
+        </div>
+    </div>
+    <div class="deviz">
+        <p>
+            ОТКРОЙ ДЛЯ СЕБЯ СИЛУ ПРИРОДЫ!
+        </p>
+    </div>
+
+    <div class="line">
+        <div class="line-left"></div>
+        <div class="line-right"></div>
+    </div>
+    <br><br><br><br>
+    <div class="vitrin">
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_vitaplus___.png">
+            <div class="frame">
+                <div class="head">Vita plus</div>
+                <div class="descript">Комплекс для восстановления клеток</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Vita plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Vita plus', 2000)">В корзину</button>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="img/doctorem_body_plus__.png">
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Body plus</div>
+                <div class="descript">Комплекс для активного образа жизни</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Body plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Body plus', 2000)">В корзину</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_omega_plus_.png">
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Omega Plus</div>
+                <div class="descript">Комплекс витаминов Омега-3 и Омега-9</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Omega Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Omega Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_epifizplus_.png">
+
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Epifiz Plus</div>
+                <div class="descript">Комплекс с мелатонином для здорового сна</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Epifiz Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Epifiz Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_thinplus___.png">
+
+
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Thin Plus</div>
+                <div class="descript">Комплекс для похудения с эффектом контроля веса</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Thin Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Thin Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_gin.png">
+
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Gin Plus</div>
+                <div class="descript">Комплекс для крепкого иммунитета</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Gin Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Gin Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_manplus____.png">
+
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Man Plus</div>
+                <div class="descript">Комплекс для мужского здоровья</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Man Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Man Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+        <div class="element">
+            <div class="el-circle">SALE</div>
+            <img src="./img/doctorem_womanplus__.png">
+
+            <div class="frame">
+                <div class="head" style="color:#FF6064">Woman Plus</div>
+                <div class="descript">Комплекс для женского здоровья</div>
+                <div class="price">2000 p.
+                    <span>4100 р.</span>
+                </div>
+                <button class="b_white" onclick="toDetail('Woman Plus')">Подробно</button>
+                <button class="b_green" onclick="toBasket('Woman Plus', 2000)">В корзину</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        Возникли вопросы? Пишите.<br>
+        Мы всегда рады помочь!<br>
+        <br><br>
+        <span>
+            E-mail: info@doctorem.ru
+        </span>
+
+        <br><br>
+
+        <div style="display: flex; justify-content: center; width: 100%">
+            <div>
+                <a href="https://t.me/doctoremru" target="_blank"
+                   rel="nofollow noopener"
+                   style="width: 30px; height: 30px;">
+                    <svg width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm21.977-68.056c.386-4.38-4.24-2.576-4.24-2.576-3.415 1.414-6.937 2.85-10.497 4.302-11.04 4.503-22.444 9.155-32.159 13.734-5.268 1.932-2.184 3.864-2.184 3.864l8.351 2.577c3.855 1.16 5.91-.129 5.91-.129l17.988-12.238c6.424-4.38 4.882-.773 3.34.773l-13.49 12.882c-2.056 1.804-1.028 3.35-.129 4.123 2.55 2.249 8.82 6.364 11.557 8.16.712.467 1.185.778 1.292.858.642.515 4.111 2.834 6.424 2.319 2.313-.516 2.57-3.479 2.57-3.479l3.083-20.226c.462-3.511.993-6.886 1.417-9.582.4-2.546.705-4.485.767-5.362Z"
+                              fill="#ffffff"></path>
+                    </svg>
+                </a></div>
+            <div><a href="https://vk.com/doctoremru"
+                    target="_blank" rel="nofollow noopener"
+                    style="width: 30px; height: 30px;">
+                <svg width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50ZM25 34c.406 19.488 10.15 31.2 27.233 31.2h.968V54.05c6.278.625 11.024 5.216 12.93 11.15H75c-2.436-8.87-8.838-13.773-12.836-15.647C66.162 47.242 71.783 41.62 73.126 34h-8.058c-1.749 6.184-6.932 11.805-11.867 12.336V34h-8.057v21.611C40.147 54.362 33.838 48.304 33.556 34H25Z"
+                          fill="#ffffff"></path>
+                </svg>
+            </a></div>
+            <div><a href="https://ok.ru/group/70000002068952"
+                    target="_blank" rel="nofollow noopener"
+                    style="width: 30px; height: 30px;">
+                <svg width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M50 100c27.614 0 50-22.386 50-50S77.614 0 50 0 0 22.386 0 50s22.386 50 50 50Zm13.463-63.08c0 7.688-6.233 13.92-13.92 13.92-7.688 0-13.92-6.232-13.92-13.92S41.855 23 49.543 23s13.92 6.232 13.92 13.92Zm-7.072 0a6.848 6.848 0 1 0-13.696 0 6.848 6.848 0 0 0 13.696 0Zm3.341 15.006c2.894-2.28 5.07-.967 5.856.612 1.37 2.753-.178 4.084-3.671 6.326-2.96 1.9-7.016 2.619-9.665 2.892l2.217 2.216 8.203 8.203a3.192 3.192 0 0 1 0 4.514l-.376.376a3.192 3.192 0 0 1-4.514 0l-8.203-8.203-8.203 8.203a3.192 3.192 0 0 1-4.514 0l-.376-.376a3.192 3.192 0 0 1 0-4.514l8.203-8.203 2.21-2.21c-2.648-.268-6.748-.983-9.732-2.898-3.494-2.243-5.041-3.573-3.671-6.326.786-1.579 2.963-2.892 5.855-.612 3.91 3.08 10.19 3.08 10.19 3.08s6.282 0 10.191-3.08Z"
+                          fill="#ffffff"></path>
+                </svg>
+            </a></div>
+            <div><a
+                    href="https://www.instagram.com/doctorem.ru/" target="_blank" rel="nofollow noopener"
+                    style="width: 30px; height: 30px;">
+                <svg width="30px" height="30px" viewBox="0 0 100 100" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M50 100C77.6142 100 100 77.6142 100 50C100 22.3858 77.6142 0 50 0C22.3858 0 0 22.3858 0 50C0 77.6142 22.3858 100 50 100ZM25 39.3918C25 31.4558 31.4566 25 39.3918 25H60.6082C68.5442 25 75 31.4566 75 39.3918V60.8028C75 68.738 68.5442 75.1946 60.6082 75.1946H39.3918C31.4558 75.1946 25 68.738 25 60.8028V39.3918ZM36.9883 50.0054C36.9883 42.8847 42.8438 37.0922 50.0397 37.0922C57.2356 37.0922 63.0911 42.8847 63.0911 50.0054C63.0911 57.1252 57.2356 62.9177 50.0397 62.9177C42.843 62.9177 36.9883 57.1252 36.9883 50.0054ZM41.7422 50.0054C41.7422 54.5033 45.4641 58.1638 50.0397 58.1638C54.6153 58.1638 58.3372 54.5041 58.3372 50.0054C58.3372 45.5066 54.6145 41.8469 50.0397 41.8469C45.4641 41.8469 41.7422 45.5066 41.7422 50.0054ZM63.3248 39.6355C65.0208 39.6355 66.3956 38.2606 66.3956 36.5646C66.3956 34.8687 65.0208 33.4938 63.3248 33.4938C61.6288 33.4938 60.2539 34.8687 60.2539 36.5646C60.2539 38.2606 61.6288 39.6355 63.3248 39.6355Z"
+                          fill="#ffffff"></path>
+                </svg>
+            </a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="./cod.js"></script>
+</body>
+</html>
