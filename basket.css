@@ -7,6 +7,7 @@
     top: 120px;
     right: 80px;
     cursor: pointer;
+    display: none;
 }
 
 .basket div {
@@ -79,7 +80,8 @@
     display: inline-block;
     text-align: center;
     margin: 0 7px;
-    color: #bbb
+    color: #bbb;
+    cursor: pointer;
 }
 
 .quard {
@@ -120,10 +122,14 @@
     cursor: pointer;
 }
 
-.modal-shop .sum {
+.modal-shop #sum {
     font-size: 16px;
     font-weight: 600;
     width: 100%;
     text-align: right;
     margin: 30px 0;
+}
+
+.product b{
+    width: 110px;
 }
