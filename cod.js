@@ -53,9 +53,9 @@ function openShop() {
                 </div>
                 <b>${el.name}</b>
                 <span>
-                    <div class="minus">−</div>
+                    <div class="minus" onclick="deletePartElement('${el.name}')">−</div>
                     ${el.count}
-                    <div class="plus">+</div>
+                    <div class="plus" onclick="addPartElement('${el.name}')">+</div>
                 </span>
                 <span>
                     ${el.count * el.price} р.
@@ -72,7 +72,26 @@ function openShop() {
     sum.innerHTML = `Сумма: ${summa} р.`
 
 
-    if(!tovar.length)modal_shop.style.display = 'none'
+    if (!tovar.length) modal_shop.style.display = 'none'
+}
+
+function deletePartElement(val) {
+    let element = tovar.findIndex(el => el.name === val)
+    if (tovar[element].count > 1) {
+        tovar[element].count = tovar[element].count - 1
+        localStorage.setItem('TOVAR', JSON.stringify(tovar))
+    } else return deleteElement(val)
+
+    onLoad()
+    openShop()
+}
+
+function addPartElement(val) {
+    let element = tovar.findIndex(el => el.name === val)
+    tovar[element].count = tovar[element].count + 1
+    localStorage.setItem('TOVAR', JSON.stringify(tovar))
+    onLoad()
+    openShop()
 }
 
 function deleteElement(val) {
@@ -121,6 +140,14 @@ function submit() {
         if (!tel.value) return alert("Поле телефон обязательна для заполнения")
         if (!email.value) return alert("Поле email обязательна для заполнения")
     }
+
+    let textForTelegram = 'fio:' + fio.value
+    if (email.value) textForTelegram += '&email:' + email.value
+    if (tel.value) textForTelegram += '&tel:' + tel.value
+    if (address.value) textForTelegram += '&address:' + address.value
+    if (index.value) textForTelegram += '&index:' + index.value
+
+    console.log("textForTelegram",textForTelegram)
 
     //https://xn----7sbbaqhlkm9ah9aiq.net/news-new/nastroyka-telegram-bota-dlya-otpravki-soobshcheniy.html
 
