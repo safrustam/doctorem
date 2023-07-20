@@ -17,6 +17,8 @@ header {
 
     font-size: 16px;
     font-weight: 500;
+
+    position: absolute;width: 100%
 }
 
 .content {
@@ -46,6 +48,12 @@ header {
 .block.left {
     text-transform: uppercase;
 }
+.block.left span{
+    transition: .5s;
+}
+.block.left span:hover{
+    color: #1e8a16;
+}
 
 .block.right {
     justify-content: flex-end;
@@ -53,6 +61,7 @@ header {
 
 .block span {
     padding: 0 20px;
+    cursor: pointer;
 }
 
 .logo img {

@@ -7,20 +7,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css" type="text/css">
-    <link rel="stylesheet" href="./vitrin_element.css" type="text/css">
-    <link rel="stylesheet" href="./basket.css" type="text/css">
-    <link rel="stylesheet" href="./advantage.css" type="text/css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/vitrin_element.css" type="text/css">
+    <link rel="stylesheet" href="css/basket.css" type="text/css">
+    <link rel="stylesheet" href="css/advantage.css" type="text/css">
+    <link rel="stylesheet" href="css/menu-select.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 </head>
 <body onload="onLoad()">
 <header>
-    <nav class="menu" style="position: absolute;width: 100%">
+    <nav class="menu">
         <div class="maincontainer">
             <span class="block left">
-                <span>Меню</span>
-                <span>Продукты</span>
-                <span>Оплата и доставка</span>
+                <span id="menu-1">Меню
+                     <span class="menu-select first">
+                        <div class="provid"></div>
+                        <div class="hool"></div>
+                        <div style="height: 20px"></div>
+                        <div style="color: #02b702"><a href="successfulorder.html"> ГЛАВНАЯ</a></div>
+                        <div><a href="successfulorder.html"> О КОМПАНИИ</a></div>
+                        <div><a href="successfulorder.html">О ПЛАСТЫРЕ</a></div>
+                        <div><a href="successfulorder.html">РЕКВИЗИТЫ</a></div>
+                        <div><a href="successfulorder.html">СЕРТИФИКАТЫ</a></div>
+                        <div style="height: 20px"></div>
+                    </span>
+                </span>
+
+
+
+                <span id="menu-2">Продукты
+                    <span class="menu-select second">
+                        <div class="provid"></div>
+                        <div class="hool"></div>
+                        <div style="height: 20px"></div>
+                        <div>Vita Plus</div>
+                        <div>Body Plus</div>
+                        <div>Omega Plus</div>
+                        <div>Epifiz Plus</div>
+                        <div>Thin Plus</div>
+                        <div>Gin Plus</div>
+                        <div>Man Plus</div>
+                        <div>Woman Plus</div>
+                        <div style="height: 20px"></div>
+                    </span>
+                </span>
+                <span id="menu-3">Оплата и доставка</span>
             </span>
             <span class="logo">
                 <img src="./img/logo.png" alt="doctorem.ru">
@@ -75,8 +106,11 @@
                 </span>
             </span>
         </div>
+
+
     </nav>
 </header>
+
 
 <div class="basket" onclick="window.scrollTo(0, 0);openShop()">
     <div>

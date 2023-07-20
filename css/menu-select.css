@@ -1,0 +1,72 @@
+#menu-1:hover .menu-select {
+    display: block;
+}
+
+#menu-2:hover .menu-select.second {
+    display: block;
+}
+
+.menu-select {
+    /*display: none;*/
+    text-transform: initial;
+    border: 1px solid #999;
+    position: fixed;
+    width: 120px;
+    /*padding: 128px 20px;*/
+    left: 10px;
+    top: 60px;
+    color: #777;
+    font-size: 14px;
+    line-height: 2.2;
+    font-weight: 700;
+    background: white;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.menu-select .provid {
+    position: absolute;
+    margin-top: -50px;
+    height: 40px;
+    width: 120px;
+}
+
+.menu-select a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.hool {
+    position: absolute;
+    width: 25px;
+    height: 1px;
+    background: white;
+    top: -1px;
+    left: 65px;
+}
+
+.menu-select.second {
+    left: 120px;
+}
+
+.menu-select div:hover {
+    color: #02b702;
+}
+
+#menu-1, #menu-2{
+    position: relative;
+}
+#menu-1:after, #menu-2:after{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 3px 0;
+    position: absolute;
+    top: 45%;
+    right: 8px;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border-color: transparent;
+    border-top-color: inherit;
+}
