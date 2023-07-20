@@ -7,12 +7,12 @@
 }
 
 .menu-select {
-    /*display: none;*/
+    display: none;
     text-transform: initial;
     border: 1px solid #999;
     position: fixed;
     width: 120px;
-    /*padding: 128px 20px;*/
+    padding: 18px 20px;
     left: 10px;
     top: 60px;
     color: #777;
