@@ -1,20 +1,28 @@
-body{
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat',Arial,sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
-.menu{
-    background-color: rgba(255,255,255,1);
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu {
+    background-color: rgba(255, 255, 255, 1);
     height: 50px;
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.10);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.10);
 
     font-size: 16px;
     font-weight: 500;
 }
-.content{
-    padding-top: 70px ;
-    padding: 90px 0px 0;
+
+.content {
+    padding: 90px 0 0;
 }
+
 /** Меню **/
 .maincontainer {
     display: flex;
@@ -34,47 +42,55 @@ body{
     white-space: nowrap;
 
 }
-.block.left{
+
+.block.left {
     text-transform: uppercase;
 }
-.block.right{
+
+.block.right {
     justify-content: flex-end;
 }
+
 .block span {
     padding: 0 20px;
 }
-.logo img{
+
+.logo img {
     height: 50px;
 }
 
 /** контент **/
 
-.main_info{
+.main_info {
     background: #1e8a16;
     max-width: 1200px;
     display: flex;
     margin: 0 auto;;
 }
+
 .main_info {
 }
-.main_info .text{
+
+.main_info .text {
     padding: 20px 40px;
     color: white;
     font-weight: 100;
     max-width: 500px;
 }
-.main_info .text p:first-child{
+
+.main_info .text p:first-child {
     font-size: 32px;
 }
-.main_info .text p{
+
+.main_info .text p {
     font-size: 20px;
-    font-family: 'Montserrat',Arial,sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     line-height: 1.55;
 }
-.deviz{
+
+.deviz {
     color: #1e8a16;
     font-size: 52px;
-    line-height: 1.3;
     font-weight: 400;
     background-position: center center;
     border-color: transparent;
@@ -83,7 +99,8 @@ body{
     text-align: center;
     width: 100%;
 }
-.line{
+
+.line {
     /*display: table-cell;*/
     width: 1200px;
     height: 1px;
@@ -92,7 +109,8 @@ body{
 
     background: radial-gradient(circle 700px, darkgreen, transparent);
 }
-footer{
+
+footer {
     text-align: center;
     background: #1e8a16;
     color: white;
@@ -101,7 +119,7 @@ footer{
     padding: 50px 0;
 }
 
-footer span{
+footer b {
     font-size: 18px;
     line-height: 1.55;
 }

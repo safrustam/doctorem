@@ -1,0 +1,94 @@
+
+
+.description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.advan-head {
+    color: #1e8a16;
+    font-size: 45px;
+    font-family: 'Arial', Arial, sans-serif;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin: 73px 0;
+}
+
+.advan-div {
+    border-width: 2px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    background-position: center center;
+
+    border-style: solid;
+
+    width: 498px;
+    height: 250px;
+    margin: 30px 60px;
+    position: relative;
+}
+.advan-div.green{
+    border-color: #1e8a16;
+}
+.advan-div.pink{
+    border-color: #e61c44;
+}
+.advan-div.grey{
+    border-color: #c7ad1c;
+}
+.advan-div.blue{
+    border-color: #28148c;
+}
+
+
+
+.advan-div .thema {
+    margin-left: -2px;
+    margin-top: -2px;
+    text-align: left;
+    color: white;
+    width: calc(100% - 80px);
+
+    font-size: 24px;
+    padding: 8px;
+}
+
+.thema.green{
+    background-image: linear-gradient(90deg, #1e8a16, #fff);
+}
+.thema.pink{
+    background-image: linear-gradient(90deg, #e61c44, #fff);
+}
+.thema.grey{
+    background-image: linear-gradient(90deg, #c7ad1c, #fff);
+}
+.thema.blue{
+    background-image: linear-gradient(90deg, #28148c, #fff);
+}
+
+.advan-logo{
+    width: 80px;
+    height: 80px;
+    background: #1e8a16;
+    border-radius: 10px;
+    position: absolute;
+    right: -12px;
+    top:-12px;
+    box-shadow: 2px 0 3px #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.advan-logo.pink{
+    background: #e61c44;
+}
+.advan-logo.grey{
+    background: #c7ad1c;
+}
+.advan-logo.blue{
+    background: #28148c;
+}
+
