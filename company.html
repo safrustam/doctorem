@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О компании Doctorem</title>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/basket.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <style>
+        .root {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .block {
+            width: 50%;
+            min-width: 450px;
+            height: 450px;
+        }
+
+        .b1, .b4, .b5 {
+            background-image: url(img/chairs.png);
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .b4 {
+            background-image: url(img/laboratory.png);
+        }
+
+        .b5 {
+            background-image: url(img/turkey.png);
+        }
+
+        .text {
+            white-space: normal;
+            padding: 100px;
+            font-size: 20px;
+            line-height: 1.55;
+            font-weight: 300;
+        }
+
+        @media (max-width: 914px) {
+            .block {
+                width: calc(100% - 80px);
+            }
+
+            .b4 {
+                order: 1;
+            }
+
+            .b3 {
+                order: 2;
+            }
+
+            .b5 {
+                order: 3;
+            }
+
+            .b6 {
+                order: 4;
+            }
+
+            .text {
+                padding: 20px;
+            }
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+    </style>
+</head>
+<body  onload="onLoad()">
+<iframe id="ifr" src="./menu.html?menu2"></iframe>
+
+<div class="basket" onclick="window.scrollTo(0, 0);openShop()">
+    <div>
+        <svg style="stroke: #000; padding: 12px 13px 14px;"
+             role="img" class="t706__carticon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path>
+            <path fill="none" stroke-width="2" stroke-miterlimit="10"
+                  d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path>
+        </svg>
+    </div>
+    <div class="basket-count"></div>
+</div>
+
+<div class="modal-shop">
+    <div class="closer">
+        <svg role="presentation" width="23px" height="23px"
+             viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+                <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+        </svg>
+    </div>
+    <div class="close-fon" onclick="closeShop()"></div>
+    <div class="panel">
+        <span style="font-size: 22px; font-weight: 600">Ваш заказ:</span>
+        <br><br>
+        <hr/>
+        <div id="products"></div>
+
+        <hr/>
+        <div id="sum"></div>
+
+        <label>Ф.И.О.</label>
+        <label for="fio"></label><input type="text" id="fio"/>
+
+        <br><br>
+        <label>Телефон</label><label for="tel"></label><input type="text" id="tel"/>
+
+        <br><br>
+        <label>E-mail</label><label for="email"></label><input type="text" id="email"/>
+
+        <br><br>
+        <label>Адрес</label><label for="address"></label><input type="text" id="address"/>
+
+        <br><br>
+        <label>Индекс</label>
+        <label for="index"></label><input type="text" id="index"/>
+
+        <button onclick="submit()"> Оформить заказ</button>
+    </div>
+</div>
+<br><br><br> <br><br>
+<div class="root">
+    <div class="block b1"></div>
+    <div class="block b2">
+        <div class="text">
+            <h1>О КОМПАНИИ</h1>
+            Компания Doctorem была создана в Анкаре в 2020 году и с тех пор производит продукцию на основе разработок в
+            области оздоровления организма человека с использованием оригинальных методик под собственной торговой
+            маркой.
+        </div>
+    </div>
+    <div class="block b3">
+        <div class="text">
+            Каждый продукт Doctorem имеет широкое применение и в то же время адресно нацелен на улучшение
+            функционирования тех или иных органов и сфер жизни человека. Вся продукция Doctorem сертифицирована и
+            становится все более признанной и популярной во многих странах мира.
+            Doctorem, являясь клиентоориентируемой компанией, постоянно совершенствует свои продукты в соответствии с
+            требованиями и ожиданиями своих клиентов.
+        </div>
+    </div>
+    <div class="block b4"></div>
+    <div class="block b5"></div>
+    <div class="block b6">
+        <div class="text">
+            Продукция Doctorem производится на собственном заводе компании в Южной Корее. Штаб квартира компании
+            находится в г.Анкаре (Турция). Филиалы компании есть уже во многих странах Европы, Азии и СНГ - таких как
+            Германия, Великобритания, Испания, Греция, Азербайджан, Казахстан, Индонезия и другие.
+            <br><br>
+            Официальный сайт компании на турецком языке<br>
+            <b>https://doctoremglobal.com</b>
+        </div>
+    </div>
+</div>
+<script src="./cod.js"></script>
+</body>
+</html>

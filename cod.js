@@ -116,6 +116,7 @@ function toBasket(val, price) {
 
 
 function showBasketCount(count = 0) {
+    console.log("showBasketCount",showBasketCount)
     if (!count) return basket.style.display = 'none'
     basket.style.display = 'block'
     basket_count.innerText = count

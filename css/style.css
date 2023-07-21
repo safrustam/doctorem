@@ -11,13 +11,14 @@ header {
 }
 
 #ifr {
-    height: 50px;
+    height: 53px;
     width: 100%;
     border: 0;
     position: absolute;
     top: 0;
     left: 0;
     overflow: hidden;
+    position: fixed;
 }
 #ifr:hover  {
     height: 350px;
