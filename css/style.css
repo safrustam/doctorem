@@ -10,6 +10,19 @@ header {
     z-index: 100;
 }
 
+#ifr {
+    height: 50px;
+    width: 100%;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+#ifr:hover  {
+    height: 350px;
+}
+
 .menu {
     background-color: rgba(255, 255, 255, 1);
     height: 50px;
@@ -18,7 +31,8 @@ header {
     font-size: 16px;
     font-weight: 500;
 
-    position: absolute;width: 100%
+    position: absolute;
+    width: 100%
 }
 
 .content {
@@ -48,10 +62,12 @@ header {
 .block.left {
     text-transform: uppercase;
 }
-.block.left span{
+
+.block.left span {
     transition: .5s;
 }
-.block.left span:hover{
+
+.block.left span:hover {
     color: #1e8a16;
 }
 

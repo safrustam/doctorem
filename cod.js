@@ -19,7 +19,6 @@ function onLoad() {
     products = products || document.querySelector('#products')
     sum = sum || document.querySelector('#sum')
 
-
     fio = fio || document.querySelector('#fio')
     email = email || document.querySelector('#email')
     index = index || document.querySelector('#index')
@@ -31,7 +30,7 @@ function onLoad() {
     tovar = JSON.parse(tovar)
 
     let summa = 0
-    tovar.forEach(el => summa += el.count)
+    tovar && tovar.forEach(el => summa += el.count)
     showBasketCount(summa)
 }
 
@@ -49,7 +48,7 @@ function openShop() {
         template +=
             `<div class="product">
                 <div class="quard">
-                    <img src="img/${enumImg[el.name]}">
+                    <img src="img/${enumImg[el.name]}" alt="">
                 </div>
                 <b>${el.name}</b>
                 <span>
@@ -95,7 +94,7 @@ function addPartElement(val) {
 }
 
 function deleteElement(val) {
-    tovar = tovar.filter(el => el.name != val)
+    tovar = tovar.filter(el => el.name !== val)
 
     localStorage.setItem('TOVAR', JSON.stringify(tovar))
     onLoad()
@@ -147,7 +146,7 @@ function submit() {
     if (address.value) textForTelegram += '&address:' + address.value
     if (index.value) textForTelegram += '&index:' + index.value
 
-    console.log("textForTelegram",textForTelegram)
+    console.log("textForTelegram", textForTelegram)
 
     //https://xn----7sbbaqhlkm9ah9aiq.net/news-new/nastroyka-telegram-bota-dlya-otpravki-soobshcheniy.html
 
@@ -155,3 +154,11 @@ function submit() {
 
     // location.href = 'successfulorder.html'
 }
+
+/**
+ *  буду слушать сообщения от iframe
+ */
+window.addEventListener('message', function (event) {
+    // перенаправляет на нужную страницу по команде из iframe menu
+    document.location = event.data
+});
