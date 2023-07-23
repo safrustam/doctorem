@@ -1,12 +1,16 @@
 .vitrin{
-    /*padding-top: 45px;*/
-    /*padding-bottom: 60px;*/
     padding: 45px 205px 80px ;
     background-color: #efefef;
     display: flex;
     justify-content: center;
     flex-wrap:wrap
 
+}
+
+@media (width <980px) {
+    .vitrin {
+        padding: 45px 0px 80px;
+    }
 }
 
 .element{

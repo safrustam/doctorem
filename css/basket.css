@@ -8,6 +8,7 @@
     right: 80px;
     cursor: pointer;
     display: none;
+    z-index: 1;
 }
 
 .basket div {
@@ -15,6 +16,23 @@
     border-radius: 50%;
     padding: 7px;
 }
+
+@media (width < 980px) {
+    #ifr{
+        height: 64px;
+    }
+    .basket{
+        width: 60px;
+        height: 60px;
+        top: 120px;
+        right: 10px;
+    }
+    .basket div{
+        padding: 2px;
+    }
+}
+
+
 
 .basket-count {
     position: absolute;
@@ -37,6 +55,7 @@
     z-index: 10;
     display: none;
     opacity: 0;
+    top:0
 }
 
 .closer {
