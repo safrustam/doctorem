@@ -1,8 +1,8 @@
-#menu-1:hover .menu-select {
+.menu-1:hover .menu-select {
     display: block;
 }
 
-#menu-2:hover .menu-select.second {
+.menu-2:hover .menu-select.second {
     display: block;
 }
 
@@ -53,10 +53,10 @@
     color: #02b702;
 }
 
-#menu-1, #menu-2{
+.menu-1, .menu-2, #menu-3{
     position: relative;
 }
-#menu-1:after, #menu-2:after{
+.menu-1:after, .menu-2:after{
     content: '';
     width: 0;
     height: 0;
@@ -64,9 +64,14 @@
     border-width: 4px 3px 0;
     position: absolute;
     top: 45%;
-    right: 8px;
+    right: -10px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border-color: transparent;
     border-top-color: inherit;
+}
+@media (width<980px) {
+    .menu-1:after, .menu-2:after {
+        right: -10px
+    }
 }

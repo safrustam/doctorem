@@ -21,15 +21,20 @@ header {
     position: fixed;
 }
 
+
+
+#ifr:hover {
+    height: 350px;
+}
+
 @media (width < 980px) {
     #ifr{
         height: 64px;
         position: relative;
     }
-}
-
-#ifr:hover {
-    height: 350px;
+    #ifr:hover {
+        height: 64px;
+    }
 }
 
 .menu {
@@ -164,13 +169,10 @@ header {
 }
 
 .line {
-    /*display: table-cell;*/
-    width: 1200px;
+    width: 100%;
     height: 1px;
     margin: 0 auto;
-    /*background: -webkit-linear-gradient(right, #1e8a16, rgba(30,138,22,0)), -webkit-linear-gradient(left, #1e8a16, rgba(30,138,22,0));;*/
-
-    background: radial-gradient(circle 700px, darkgreen, transparent);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(9,129,28,1) 25%, rgba(9,129,28,1) 75%, rgba(255,255,255,1) 100%);
 }
 
 footer {

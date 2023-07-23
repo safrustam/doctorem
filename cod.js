@@ -116,7 +116,7 @@ function toBasket(val, price) {
 
 
 function showBasketCount(count = 0) {
-    console.log("showBasketCount",showBasketCount)
+    console.log("showBasketCount", showBasketCount)
     if (!count) return basket.style.display = 'none'
     basket.style.display = 'block'
     basket_count.innerText = count
@@ -160,6 +160,13 @@ function submit() {
  *  буду слушать сообщения от iframe
  */
 window.addEventListener('message', function (event) {
-    // перенаправляет на нужную страницу по команде из iframe menu
-    document.location = event.data
+
+
+    if (typeof event.data === 'string') {
+        // перенаправляет на нужную страницу по команде из iframe menu
+        document.location = event.data
+    } else if (event.data.height) {
+        // высота для мобильного меню
+        document.querySelector('#ifr').style.height = event.data.height
+    }
 });
