@@ -197,6 +197,11 @@ header {
     background: linear-gradient(90deg, #fff 0%, #089bcc 25%, #089bcc 75%, #fff 100%);
 }
 
+.line.violet {
+    background: linear-gradient(90deg, #fff 0%, #bd1ca2 25%, #bd1ca2 75%, #fff 100%);
+}
+
+
 
 footer {
     text-align: center;
