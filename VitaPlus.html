@@ -9,79 +9,8 @@
     <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="css/basket.css" type="text/css">
+    <link rel="stylesheet" href="css/products.css" type="text/css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <style>
-        .root img {
-            width: 100%;
-        }
-
-        @media (width < 980px) {
-            .root {
-                margin-top: -73px;
-            }
-        }
-
-        .top-place {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 120px;
-            font-weight: 600;
-        }
-
-        .top-place h1 {
-            color: #1e8a16;
-        }
-
-        .top-place del {
-            color: red;
-        }
-
-        .root .field {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-
-        }
-
-        .line {
-            max-width: 1000px
-        }
-
-        .round-img {
-            width: 250px;
-            margin: 0 auto
-        }
-
-        @media (width < 980px) {
-            .root .field {
-                max-width: 400px;
-                margin: 0 auto;
-                padding: 20px;
-
-            }
-
-            .line {
-                max-width: 400px
-            }
-
-            .round-img {
-                width: 60%;
-                margin: 0 auto
-            }
-        }
-
-        .field h4 {
-            text-align: center;
-        }
-
-
-        .round-img img {
-            width: 100%;
-            border-radius: 50%
-        }
-
-    </style>
 </head>
 <body onload="onLoad()">
 <iframe id="ifr" src="./menu.html?menu11"></iframe>
@@ -151,7 +80,7 @@
             <button onclick="toBasket('Vita plus', 2000)">В корзину</button>
         </div>
         <div>
-            <img src="img/doctorem_vitaplus___.png" style="width: 80px" alt="">
+            <img src="img/doctorem_vitaplus___.png" alt="">
         </div>
     </div>
     <br>
@@ -159,8 +88,8 @@
     <div class="field">
         <h4>ОПИСАНИЕ:</h4>
 
-        Doctorem Vita Plus - это комплекс "МИКРО ПИТАНИЯ" организма, обеспечивающий процесс его обновления на клеточном
-        уровне.
+        <b> Doctorem Vita Plus</b> - это комплекс "МИКРО ПИТАНИЯ" организма, обеспечивающий процесс его обновления на
+        клеточном уровне.
         <br><br>
         Имея в своем составе женьшень, коллаген и ионы серебра, а также благодаря трансдермальному способу доставки этих
         элементов, Vita Plus является эффективным помощником для укрепления иммунитета и поддержания здоровья суставов,
@@ -220,16 +149,17 @@
             <li>бедро и голень;</li>
             <li>подошва стопы.</li>
         </ul>
-        <img src="img/vita/back.png" alt="">
+        <div class="round-img big">
+            <img src="img/vita/back.png" alt="">
+        </div>
     </div>
 
     <div class="line"></div>
     <div class="field">
         <h4>ОПИСАНИЕ АКТИВНЫХ ЭЛЕМЕНТОВ</h4>
-        <div class="round-img">
+        <div class="round-img" id="ancor_1">
             <img src="img/vita/berrires.png" alt="">
         </div>
-        <a id="ancor_1"></a>
         <h5>Красный корейский женьшень</h5>
 
         Корейский женьшень считается «корнем жизни». Это уникальное растение с поистине могущественными свойствами.
@@ -256,14 +186,13 @@
             <li>положительно влияет на состояние кожи и внутренних органов;</li>
             <li>препятствует старению организма и сохраняет здоровье человека в любом возрасте.</li>
         </ul>
-        <div class="round-img">
-            <img src="img/vita/powder.png" alt="">
-        </div>
 
 
     </div>
-    <div class="field">
-        <a id="ancor_2"></a>
+    <div class="field" id="ancor_2">
+        <div class="round-img">
+            <img src="img/vita/powder.png" alt="">
+        </div>
         <h5>Сапонины</h5>
         - это сложные биологически активные вещества, содержащиеся в растениях. В их состав входят углеводы и различные
         радикалы. Сапонины оказывают существенное влияние на растительные и животные клетки, поэтому используются
@@ -280,10 +209,9 @@
     </div>
 
     <div class="field">
-        <div class="round-img">
+        <div class="round-img" id="ancor_3">
             <img src="img/vita/silver.png" alt="">
         </div>
-        <a id="ancor_3"></a>
         <h5>Ионы серебра</h5>
         Об обеззараживающих свойствах серебра известно с древних времен.
         <br><br>
@@ -296,10 +224,9 @@
     </div>
 
     <div class="field">
-        <div class="round-img">
+        <div class="round-img" id="ancor_4">
             <img src="img/vita/germanii.png" alt="">
         </div>
-        <a id="ancor_4"></a>
         <h5>Органический германий</h5>
         Для человека германий является биологическим активным микроэлементом. Обнаружена жизненная необходимость
         ультрамикродоз германия для повышения эффективности иммунной системы, борьбы с онкологическими заболеваниями.
@@ -309,10 +236,9 @@
     </div>
 
     <div class="field">
-        <div class="round-img">
+        <div class="round-img" id="ancor_5">
             <img src="img/vita/root.png" alt="">
         </div>
-        <a id="ancor_5"></a>
         <h5>Гинзенозиды</h5>
         - это отдельная группа растительных элементов, которые содержатся в женьшене. Они стимулируют гемоглобин на
         соединение с кислородом, что повышает сатурацию (насыщение кислородом) клеток организма, в результате повышается
@@ -337,10 +263,9 @@
     </div>
 
     <div class="field">
-        <div class="round-img">
+        <div class="round-img" id="ancor_6">
             <img src="img/vita/face.png" alt="">
         </div>
-        <a id="ancor_6"></a>
         <h5>Коллаген</h5>
         - это важный белок для организма, обладающий рядом уникальных свойств. Благодаря ему улучшается состояние кожи,
         она разглаживается, становится упругой и привлекательной. Коллаген помогает нормализовать вес, пищеварение,

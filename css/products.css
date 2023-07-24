@@ -1,0 +1,96 @@
+.root img {
+    width: 100%;
+}
+
+
+.top-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+    font-weight: 600;
+    flex-wrap: wrap;
+}
+
+.top-place h1 {
+    color: #1e8a16;
+}
+
+.top-place h1.red {
+    color: #e61c44;
+}
+
+.top-place del {
+    color: red;
+}
+
+.top-place img {
+    width: 80px;
+}
+
+@media (width < 980px) {
+    .root {
+        margin-top: -65px;
+    }
+
+    .top-place {
+        gap: 20px;
+    }
+
+    .top-place img {
+        width: 280px;
+    }
+}
+
+.root .field {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+.line {
+    max-width: 1000px
+}
+
+.round-img {
+    width: 250px;
+    margin: 0 auto
+}
+
+.round-img.big{
+    width: 50%;
+}
+
+@media (width < 980px) {
+    .root .field {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+
+    }
+
+    .line {
+        max-width: 400px
+    }
+
+    .round-img {
+        width: 60%;
+        margin: 0 auto
+    }
+
+    .round-img.big{
+        width: 100%;
+    }
+
+}
+
+.field h4 {
+    text-align: center;
+}
+
+
+.round-img img {
+    width: 100%;
+    border-radius: 50%
+}
