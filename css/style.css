@@ -193,6 +193,10 @@ header {
     background: linear-gradient(90deg, #fff 0%, #28148c 25%, #28148c 75%, #fff 100%);
 }
 
+.line.whiteBlue {
+    background: linear-gradient(90deg, #fff 0%, #089bcc 25%, #089bcc 75%, #fff 100%);
+}
+
 
 footer {
     text-align: center;

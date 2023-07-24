@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Man Plus Doctorem</title>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/basket.css" type="text/css">
+    <link rel="stylesheet" href="css/products.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+</head>
+<body onload="onLoad()">
+<iframe id="ifr" src="./menu.html?menu14"></iframe>
+<div class="basket" onclick="window.scrollTo(0, 0);openShop()">
+    <div>
+        <svg style="stroke: #000; padding: 12px 13px 14px;"
+             role="img" class="t706__carticon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path>
+            <path fill="none" stroke-width="2" stroke-miterlimit="10"
+                  d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path>
+        </svg>
+    </div>
+    <div class="basket-count"></div>
+</div>
+<div class="modal-shop">
+    <div class="closer">
+        <svg role="presentation" width="23px" height="23px"
+             viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+                <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+        </svg>
+    </div>
+    <div class="close-fon" onclick="closeShop()"></div>
+    <div class="panel">
+        <span style="font-size: 22px; font-weight: 600">Ваш заказ:</span>
+        <br><br>
+        <hr/>
+        <div id="products"></div>
+
+        <hr/>
+        <div id="sum"></div>
+
+        <label>Ф.И.О.</label>
+        <label for="fio"></label><input type="text" id="fio"/>
+
+        <br><br>
+        <label>Телефон</label><label for="tel"></label><input type="text" id="tel"/>
+
+        <br><br>
+        <label>E-mail</label><label for="email"></label><input type="text" id="email"/>
+
+        <br><br>
+        <label>Адрес</label><label for="address"></label><input type="text" id="address"/>
+
+        <br><br>
+        <label>Индекс</label>
+        <label for="index"></label><input type="text" id="index"/>
+
+        <button onclick="submit()"> Оформить заказ</button>
+    </div>
+</div>
+
+<br><br><br><br>
+<div class="root">
+    <img src="img/man/muscular-man-celebra.jpg" alt="">
+
+    <div class="top-place">
+        <div>
+            <h1 class="whiteBlue">Man Plus</h1>
+            2000 р.
+            <del>4100р.</del>
+            <br> <br>
+            <button onclick="toBasket('Man Plus', 2000)">В корзину</button>
+        </div>
+        <div>
+            <img src="img/doctorem_manplus____.png" alt="">
+        </div>
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>ОПИСАНИЕ:</h4>
+        <b>Man Plus</b> - это продукт, который производится по специальной формуле Doctorem в качестве эффективного
+        решения
+        основных физических проблем, с которыми сталкиваются мужчины, улучшая качество их жизни.
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>ОБЛАСТЬ ПРИМЕНЕНИЯ:</h4>
+        <ul>
+            <li>снижение симптомов слабости и утомляемости;</li>
+            <li>снижение уровня оксидантов в тканях и стенках сосудов;</li>
+            <li>улучшение эрекции за счет расширения сосудов;</li>
+            <li>ингибирование доброкачественной гиперплазии предстательной железы;</li>
+            <li>улучшение работы почек и мочевыводящих путей.</li>
+        </ul>
+        <img src="img/man/man.png" alt="">
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>СРОК ЭФФЕКТИВНОГО ВОЗДЕЙСТВИЯ:</h4>
+        <b>48</b> часа с момента нанесения.
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>СОДЕРЖИМОЕ УПАКОВКИ:</h4>
+        <b>30</b> пластырей 130х94 мм.
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>СОСТАВ АКТИВНОГО ВЕЩЕСТВА:</h4>
+        <ul>
+            <li><a href="#ancor_1">цинк;</a></li>
+            <li><a href="#ancor_2">имбирь;</a></li>
+            <li><a href="#ancor_3">женьшень;</a></li>
+            <li><a href="#ancor_4">омега-3;</a></li>
+            <li><a href="#ancor_5">корень мака;</a></li>
+            <li><a href="#ancor_6">L-аргинин;</a></li>
+            <li><a href="#ancor_7">карликовая пальма;</a></li>
+            <li><a href="#ancor_8">трибулус террестрис;</a></li>
+            <li><a href="#ancor_9">витания снотворная.</a></li>
+        </ul>
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>ЗОНЫ НАНЕСЕНИЯ:</h4>
+        Ниже пупка в районе паховой области.
+        Достаточно наносить один пластырь за раз. В случае необходимости нанесения на несколько зон, пластырь можно
+        разрезать на части. Замену пластыря рекомендуем производить через каждые 2 дня.
+        <div class="round-img big">
+            <img src="img/man/body.png" alt="">
+        </div>
+    </div>
+
+    <div class="line whiteBlue"></div>
+    <div class="field">
+        <h4>ОПИСАНИЕ АКТИВНЫХ ЭЛЕМЕНТОВ</h4>
+        <div class="round-img" id="ancor_1">
+            <img src="img/omega/z.png" alt="">
+        </div>
+        <h5>Цинк</h5>
+        - является одним из важнейших минералов, поскольку он не вырабатывается в организме человека, его необходимо
+        получать извне.
+        <br><br>
+        Цинк имеет много функций, таких как поддержка иммунной системы, укрепление волос, ногтей, поддержание здоровья
+        кожи, увеличение минеральной плотности костной ткани, поддержка лечения глазных заболеваний.
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_2">
+            <img src="img/gin/imbir.png" alt="">
+        </div>
+
+        <h5>Имбирь</h5>
+        - его польза во многом связана с его антиоксидантными и противовоспалительными свойствами, а также наличием
+        таких терапевтических соединений, как гингерол, шогаол, парадол и зингерон. На самом деле, из имбиря можно
+        выделить более 100 соединений, которые наделяют его антиоксидантными, противораковыми и нейропротекторными
+        свойствами.
+
+
+        <br><br> <br><br>
+
+        <div class="round-img" id="ancor_3">
+            <img src="img/vita/berrires.png" alt="">
+        </div>
+        <h5>Женьшень</h5>
+        - является самым известным в мире адаптогеном (повышает способность организма сопротивляться неблагоприятным
+        факторам). С древних времен применяется на дальнем Востоке и в Китае в качестве психостимулирующего и
+        общетонизирующего средства.Благодаря своим свойствам растение активно применяется для активизации либидо и
+        улучшения эрекции.
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_4">
+            <img src="img/body/fish.png" alt="">
+        </div>
+        <h5>Омега-3</h5>
+        Уникальные свойства <b>Омега-3</b> кислот позволяют представителям сильного пола дольше сохранить <b>мужское</b>
+        здоровье,
+        силу, предотвратить развитие ишемической болезни сердца, заболеваний сосудов. Они повышают сопротивляемость
+        <b>мужского</b> организма к инфекциям, психологическим и физическим нагрузкам, стрессу.
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_5">
+            <img src="img/man/opium.png" alt="">
+        </div>
+
+        <h5>Корень мака</h5>
+        - прием корня маки увеличивает концентрацию сперматозоидов — их количество на миллилитр семенной жидкости. А это
+        один из показателей, влияющий на мужскую фертильность.
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_6">
+            <img src="img/man/arginin.png" alt="">
+        </div>
+
+        <h5>L-аргинин</h5>
+        - ценнейшая аминокислота способствует улучшению эректильной функции, полового влечения (у мужчин и женщин),
+        повышению активности спермы и увеличению содержания в ней сперматозоидов. L-аргинин для сердечно-сосудистой
+        системы способствует снижению повышенного артериального давления, образования атеросклеротических бляшек.
+        L-Аргинин в спорте участвует в формировании мышечной ткани, улучшает питание мышц.
+
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_7">
+            <img src="img/man/palma.png" alt="">
+        </div>
+        <h5>Карликовая пальма (Serenoa Repens)</h5>
+        Механизм действия целебного вещества основан на снижении уровня ДГТ непосредственно в предстательной железе, не
+        затрагивая его общего содержания в организме. Уменьшение концентрации дигидротестостерона замедляет рост опухоли
+        при гиперплазии предстательной железы, устраняет воспалительный процесс и отек, вследствие чего происходит
+        постепенное восстановление урогенитальных функций. Длительной практикой доказано еще одно полезное качество
+        пальмы сабаль для мужчин - сексуальное омоложение. Регулярный прием средства восстанавливает потенцию, повышает
+        либидо и улучшает репродуктивную функцию.
+
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_8">
+            <img src="img/man/tribulus.png" alt="">
+        </div>
+        <h5>Трибулус террестрис</h5>
+        Tribulus Terrestris в переводе с латинского - колючая лоза известен людям как лекарственное растение с давних
+        пор. В Древней Греции это растение применялось в качестве мочегонного и тонизирующего средства. В Индии его
+        использовали как антисептик. Китайцы считали «колючую лозу» универсальным лекарственным средством и лечили с его
+        помощью почки, печень, сердце и другие органы. На Балканах она использовалась как лекарство от бесплодия мужчин.
+
+
+        <br><br> <br><br>
+        <div class="round-img" id="ancor_9">
+            <img src="img/man/tribulus.png" alt="">
+        </div>
+        <h5>Витания снотворная</h5>
+        Препараты из них, благодаря высокой эффективности и минимуму побочных эффектов, делают витанию одним из наиболее
+        распространенных растений аюрведической медицины. Она имеет приблизительно такое же значение, и к ней относятся
+        с таким же пиететом, как к женьшеню в китайской медицине.
+        <br><br>
+
+        Традиционно плоды использовали как афродизиак, амулет и колдовское средство. Из корней готовили любовный
+        напиток. В тантрических ритуалах использовали для увеличения продолжительности эрекции.
+    </div>
+
+
+</div>
+<script src="./cod.js"></script>
+</body>
+</html>
