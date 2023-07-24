@@ -32,12 +32,19 @@
         }
 
         function openMobileMenu(val) {
-            let isM1open = false
             let m1 = document.querySelector('.menu-mobile-1')
-            isM1open = m1 && m1.style.display == 'block'
+            let m2 = document.querySelector('.menu-mobile-2')
+            let isM1open = m1 && m1.style.display == 'block'
+            let isM2open = m1 && m2.style.display == 'block'
             if (val == 1 && m1) {
-                m1.style.display = isM1open?'none':'block'
+                m1.style.display = isM1open ? 'none' : 'block'
                 window.parent.postMessage({height: isM1open ? '480px' : '640px'});
+                if (!isM1open) m2.style.display = 'none'
+            }
+            if (val == 2 && m2) {
+                m2.style.display = isM2open ? 'none' : 'block'
+                window.parent.postMessage({height: isM2open ? '480px' : '730px'});
+                if (!isM2open) m1.style.display = 'none'
             }
         }
     </script>
@@ -152,7 +159,21 @@
         </div>
 
         <br><br>
-        <span class="menu-2 menu-mobile">Продукты</span>
+        <span class="menu-2 menu-mobile" onclick="openMobileMenu(2)">Продукты</span>
+
+        <div class="menu-mobile-2">
+            <a class="menu11" onclick="sendParent('VitaPlus.html')"> Vita Plus</a>
+            <a class="menu12" onclick="sendParent('BodyPlus.html')"> Body Plus</a>
+            <a class="menu13" onclick="sendParent('OmegaPlus.html')"> Omega Plus</a>
+            <a class="menu14" onclick="sendParent('EpifizPlus.html')"> Epifiz Plus</a>
+            <a class="menu15" onclick="sendParent('ThinPlus.html')"> Thin Plus</a>
+            <a class="menu16" onclick="sendParent('GinPlus.html')"> Gin Plus</a>
+            <a class="menu17" onclick="sendParent('ManPlus.html')"> Man Plus</a>
+            <a class="menu18" onclick="sendParent('WomanPlus.html')"> Woman Plus</a>
+            <div class="line"></div>
+        </div>
+
+
         <br><br>
         <span class="menu-mobile">Оплата и доставка</span>
 
