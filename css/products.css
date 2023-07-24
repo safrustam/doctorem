@@ -21,10 +21,14 @@
 }
 
 .top-place h1.yellow {
+    color: #f5e729;
+}
+
+.top-place h1.darkYellow {
     color: #c7ad1c
 }
 
-.top-place h1.yellow {
+.top-place h1.blue {
     color: #28148c
 }
 
