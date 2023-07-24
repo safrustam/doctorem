@@ -48,6 +48,11 @@
             max-width: 1000px
         }
 
+        .round-img {
+            width: 250px;
+            margin: 0 auto
+        }
+
         @media (width < 980px) {
             .root .field {
                 max-width: 400px;
@@ -59,16 +64,17 @@
             .line {
                 max-width: 400px
             }
+
+            .round-img {
+                width: 60%;
+                margin: 0 auto
+            }
         }
 
         .field h4 {
             text-align: center;
         }
 
-        .round-img {
-            width: 60%;
-            margin: 0 auto
-        }
 
         .round-img img {
             width: 100%;
@@ -142,7 +148,7 @@
             2000 р.
             <del>4100р.</del>
             <br> <br>
-            <button>В корзину</button>
+            <button onclick="toBasket('Vita plus', 2000)">В корзину</button>
         </div>
         <div>
             <img src="img/doctorem_vitaplus___.png" style="width: 80px" alt="">
@@ -340,6 +346,6 @@
         она разглаживается, становится упругой и привлекательной. Коллаген помогает нормализовать вес, пищеварение,
         восстанавливает сон, придает силу и бодрость.
     </div>
-        <script src="./cod.js"></script>
+    <script src="./cod.js"></script>
 </body>
 </html>
