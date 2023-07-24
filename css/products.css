@@ -19,6 +19,10 @@
 .top-place h1.red {
     color: #e61c44;
 }
+.top-place h1.yellow {
+    color: #c7ad1c
+}
+
 
 .top-place del {
     color: red;
