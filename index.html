@@ -16,7 +16,7 @@
 </head>
 <body onload="onLoad()">
 
-<iframe id="ifr" src="./menu.html?menu1" ></iframe>
+<iframe id="ifr" src="./menu.html?menu1"></iframe>
 
 <div class="basket" onclick="window.scrollTo(0, 0);openShop()">
     <div>
@@ -317,6 +317,12 @@
             </div>
         </div>
     </footer>
+
+    <div id="go-to-top">
+        <button onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            <img src="img/gtt.svg">
+        </button>
+    </div>
 </div>
 <script src="./cod.js"></script>
 </body>

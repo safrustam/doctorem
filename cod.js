@@ -1,6 +1,7 @@
 let basket, basket_count, modal_shop
 let tovar
 let fio, email, index, address, tel, products, sum
+let goToTop
 const enumImg = {
     'Body plus': 'doctorem_body_plus__.png',
     'Omega Plus': 'doctorem_omega_plus_.png',
@@ -18,12 +19,19 @@ function onLoad() {
     modal_shop = modal_shop || document.querySelector('.modal-shop')
     products = products || document.querySelector('#products')
     sum = sum || document.querySelector('#sum')
+    goToTop = goToTop || document.querySelector('#go-to-top')
+
 
     fio = fio || document.querySelector('#fio')
     email = email || document.querySelector('#email')
     index = index || document.querySelector('#index')
     address = address || document.querySelector('#address')
     tel = tel || document.querySelector('#tel')
+
+
+    addEventListener("scroll", () => {
+        goToTop.style.display = (window.scrollY > 500) ? 'block' : 'none'
+    });
 
 
     tovar = localStorage.getItem('TOVAR')
@@ -116,16 +124,9 @@ function toBasket(val, price) {
 
 
 function showBasketCount(count = 0) {
-    console.log("showBasketCount", showBasketCount)
     if (!count) return basket.style.display = 'none'
     basket.style.display = 'block'
     basket_count.innerText = count
-}
-
-
-function toDetail() {
-    console.log("toDetail",)
-    // отправим по имени по разным страницам
 }
 
 function submit() {
