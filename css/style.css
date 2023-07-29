@@ -112,7 +112,7 @@ header {
 .main_info .text {
     padding: 20px 40px;
     color: white;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 
@@ -137,11 +137,7 @@ header {
         width: 100%;
     }
 
-    .main_info .text {
-        padding: 0 20px 20px;
-        font-weight: 300;
 
-    }
 
     .main_info .text p:first-child {
         font-size: 28px;
@@ -231,3 +227,20 @@ footer b {
     border: none;
     cursor: pointer;
 }
+
+.mail_to{
+    color: inherit;
+    text-decoration: auto;
+}
+
+.more{
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 20px;
+    background: inherit;
+    padding: 5px 40px;
+    float: right;
+    border: 1px solid white;
+    cursor: pointer;
+}
+

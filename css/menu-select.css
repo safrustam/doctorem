@@ -64,7 +64,7 @@
     border-width: 4px 3px 0;
     position: absolute;
     top: 45%;
-    right: -10px;
+    right: 10px;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     border-color: transparent;

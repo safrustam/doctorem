@@ -3,14 +3,14 @@ let tovar
 let fio, email, index, address, tel, products, sum
 let goToTop
 const enumImg = {
-    'Body plus': 'doctorem_body_plus__.png',
+    'Body Plus': 'doctorem_body_plus__.png',
     'Omega Plus': 'doctorem_omega_plus_.png',
     'Epifiz Plus': 'doctorem_epifizplus_.png',
     'Thin Plus': 'doctorem_thinplus___.png',
     'Gin Plus': 'doctorem_gin.png',
     'Man Plus': 'doctorem_manplus____.png',
     'Woman Plus': 'doctorem_womanplus__.png',
-    'Vita plus': 'doctorem_vitaplus___.png'
+    'Vita Plus': 'doctorem_vitaplus___.png'
 }
 
 function onLoad() {
@@ -30,6 +30,7 @@ function onLoad() {
 
 
     addEventListener("scroll", () => {
+        if(!goToTop) return
         goToTop.style.display = (window.scrollY > 500) ? 'block' : 'none'
     });
 
@@ -155,6 +156,18 @@ function submit() {
     //6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8
 
     // location.href = 'successfulorder.html'
+}
+
+
+function toDetail(val) {
+    if (val === 'Vita Plus') document.location = 'VitaPlus.html'
+    if (val === 'Body Plus') document.location = 'BodyPlus.html'
+    if (val === 'Omega Plus') document.location = 'OmegaPlus.html'
+    if (val === 'Epifiz Plus') document.location = 'EpifizPlus.html'
+    if (val === 'Thin Plus') document.location = 'ThinPlus.html'
+    if (val === 'Gin Plus') document.location = 'GinPlus.html'
+    if (val === 'Man Plus') document.location = 'ManPlus.html'
+    if (val === 'Woman Plus') document.location = 'WomanPlus.html'
 }
 
 /**

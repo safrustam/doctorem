@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Оплата и доставка</title>
+    <link href="https://fonts.cdnfonts.com/css/montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/basket.css" type="text/css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <style>
+
+        h1 {
+            font-size: 36px;
+            margin: 50px;
+        }
+
+        .root {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .root p, .root ol {
+            margin: 0 auto;
+            max-width: 780px;
+            text-align: initial;
+            font-size: 16px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        .root img{
+            width: 780px
+        }
+
+        .root button {
+            background-color: #1e8a16;
+            font-size: 18px;
+            color: white;
+            border-radius: 40px;
+            border: none;
+            padding: 12px 60px;
+            float: right;
+            width: 450px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+
+        @media (width < 980px) {
+            h1 {
+                font-size: 24px;
+            }
+
+            .root {
+                margin-top: -80px;
+            }
+
+            .root p {
+                padding: 20px;
+            }
+
+            .root img {
+                width: 100%
+            }
+
+            .root button {
+                padding: 12px 0;
+                width: 350px;
+
+            }
+        }
+
+    </style>
+</head>
+<body onload="onLoad()">
+<iframe id="ifr" src="./menu.html"></iframe>
+
+<div class="basket" onclick="window.scrollTo(0, 0);openShop()">
+    <div>
+        <svg style="stroke: #000; padding: 12px 13px 14px;"
+             role="img" class="t706__carticon-img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+            <path fill="none" stroke-width="2" stroke-miterlimit="10" d="M44 18h10v45H10V18h10z"></path>
+            <path fill="none" stroke-width="2" stroke-miterlimit="10"
+                  d="M22 24V11c0-5.523 4.477-10 10-10s10 4.477 10 10v13"></path>
+        </svg>
+    </div>
+    <div class="basket-count"></div>
+</div>
+
+<div class="modal-shop">
+    <div class="closer">
+        <svg role="presentation" width="23px" height="23px"
+             viewBox="0 0 23 23" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="none" stroke-width="1" fill="#fff" fill-rule="evenodd">
+                <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+                <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) "
+                      x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+        </svg>
+    </div>
+    <div class="close-fon" onclick="closeShop()"></div>
+    <div class="panel">
+        <span style="font-size: 22px; font-weight: 600">Ваш заказ:</span>
+        <br><br>
+        <hr/>
+        <div id="products"></div>
+
+        <hr/>
+        <div id="sum"></div>
+
+        <label>Ф.И.О.</label>
+        <label for="fio"></label><input type="text" id="fio"/>
+
+        <br><br>
+        <label>Телефон</label><label for="tel"></label><input type="text" id="tel"/>
+
+        <br><br>
+        <label>E-mail</label><label for="email"></label><input type="text" id="email"/>
+
+        <br><br>
+        <label>Адрес</label><label for="address"></label><input type="text" id="address"/>
+
+        <br><br>
+        <label>Индекс</label>
+        <label for="index"></label><input type="text" id="index"/>
+
+        <button onclick="submit()"> Оформить заказ</button>
+    </div>
+</div>
+
+
+<br><br>
+<div class="root">
+    <img src="img/payment.png" alt="">
+
+    <h1>
+        ОПЛАТА И ДОСТАВКА
+    </h1>
+    <p>
+        Приобрести продукцию Doctorem можно 2 способами:
+    </p>
+    <br><br>
+    <ol>
+        <li> на нашем сайте. Для этого добавьте нужные продукты в корзину и оформите заказ. В течении 24 часов после
+            оформления заказа с Вами свяжется наш представитель для согласования стоимости и адреса доставки, а также
+            способа оплаты.
+        </li>
+        <li>в личном кабинете на официальном сайте компании.
+        </li>
+    </ol>
+    <p>
+        <br>
+        <button onclick="document.location='https://doctorembackoffice.com/giris.php?lang=ru'">
+            Перейти в личный кабинет
+        </button>
+        <br>
+        <br><br><br>
+        Для регистрации в личном кабинете необходимо воспользоваться реферальной ссылкой.
+        <br><br>
+        <button onclick="document.location='https://doctorembackoffice.com/bayi_kayit.php?lang=ru'">
+            Зарегистрировать личный кабинет
+        </button>
+        <br><br><br>
+        <br>
+        Учитывая отключение РФ от системы SWIFT, произвести оплату с российских карт в личном кабинете на официальном
+        сайте
+        компании невозможно. В случае наличия у Вас карты иностранного банка проблемы с оплатой не возникнет.
+    </p>
+
+    <br><br><br><br><br><br>
+</div>
+
+
+<script src="./cod.js"></script>
+</body>
+</html>

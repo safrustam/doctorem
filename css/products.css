@@ -12,6 +12,15 @@
     flex-wrap: wrap;
 }
 
+.top-place button{
+    border-radius: 20px;
+    background: #1e8a16;
+    color: white;
+    padding: 11px 30px;
+    border: none;
+    cursor: pointer;
+}
+
 .top-place h1 {
     color: #1e8a16;
 }
