@@ -2,6 +2,8 @@ let basket, basket_count, modal_shop
 let tovar
 let fio, email, index, address, tel, products, sum
 let goToTop
+
+let summa = 0
 const enumImg = {
     'Body Plus': 'doctorem_body_plus__.png',
     'Omega Plus': 'doctorem_omega_plus_.png',
@@ -30,7 +32,7 @@ function onLoad() {
 
 
     addEventListener("scroll", () => {
-        if(!goToTop) return
+        if (!goToTop) return
         goToTop.style.display = (window.scrollY > 500) ? 'block' : 'none'
     });
 
@@ -52,7 +54,7 @@ function openShop() {
     modal_shop.style.display = 'block'
     setTimeout(() => modal_shop.style.opacity = '1')
     let template = '';
-    let summa = 0
+
     tovar.forEach(el => {
         template +=
             `<div class="product">
@@ -130,32 +132,71 @@ function showBasketCount(count = 0) {
     basket_count.innerText = count
 }
 
-function submit() {
-    console.log("fio.value", fio.value)
-    console.log("email.value", email.value)
-    console.log("address.value", address.value)
-    console.log("tel.value", tel.value)
-    console.log("index.value", index.value)
 
+
+function submit() {
+
+console.log("tovar",tovar)
+
+    let textForTelegram = "<b>Новый заказ </b>"
+    tovar.forEach((el, index)=>{
+        textForTelegram+='<br>'+(index+1)+'. '+el.name+': '+el.price+' ('+el.price+" x "+el.count+")"
+    })
+
+    textForTelegram+='<br>К оплате: <b>'+ summa+ ' RUB</b>'
+
+
+/////////////////////// _  _  ////////////////////////
     if (!fio.value) return alert("Поле ФИО обязательна для заполнения")
     if (!(tel.value || email.value)) {
         if (!tel.value) return alert("Поле телефон обязательна для заполнения")
         if (!email.value) return alert("Поле email обязательна для заполнения")
     }
 
-    let textForTelegram = 'fio:' + fio.value
-    if (email.value) textForTelegram += '&email:' + email.value
-    if (tel.value) textForTelegram += '&tel:' + tel.value
-    if (address.value) textForTelegram += '&address:' + address.value
-    if (index.value) textForTelegram += '&index:' + index.value
 
-    console.log("textForTelegram", textForTelegram)
+    textForTelegram += '<br><br><br><b>Purchaser information:</b>'
+    textForTelegram += '<br>Ф_И_О_: ' + fio.value
+    if (tel.value) textForTelegram += '<br>Phone: ' + tel.value
+    if (email.value) {
+        const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+        if (!EMAIL_REGEXP.test(email.value)) return alert('Неправильный email')
+        textForTelegram += '<br>Email: ' + email.value
+    }
 
-    //https://xn----7sbbaqhlkm9ah9aiq.net/news-new/nastroyka-telegram-bota-dlya-otpravki-soobshcheniy.html
+    if (address.value) textForTelegram += '<br>Адрес: ' + address.value
+    if (index.value) textForTelegram += '<br>Индекс: ' + index.value
 
-    //6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8
 
-    // location.href = 'successfulorder.html'
+
+    let botId = 'bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8'
+    let chatId = '-1001982106032'
+
+
+    let linkTelega = `https://api.telegram.org/${botId}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${textForTelegram}`
+
+
+    console.log("linkTelega", linkTelega)
+
+    // let zzz = `https://api.telegram.org/bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8/sendMessage?chat_id=-1001982106032&text="попробуем\nтак "Первая%20строка.%0AВто<b>ра</b>я%20стро<i>ка</i>.%0Aеще&parse_mode=Markdown`
+
+    fetch(linkTelega)
+        .then(response => response.json())
+        .then(json => console.log('> > > '+json))
+
+
+/*
+    fetch('https://jsonplaceholder.typicode.com/todos/1')
+    .then(response => response.json())
+    .then(json => console.log('> > > '+json))
+*/
+/*
+    fetch(zzz)
+    .then(response => response.json())
+    .then(json => console.log('> > > '+json))
+*/
+
+    //`https://api.telegram.org/bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8/sendMessage?chat_id=-1001982106032&text="попробуем\nтак "Первая%20строка.%0AВто<b>ра</b>я%20стро<i>ка</i>.%0Aеще&parse_mode=Markdown`
+
 }
 
 
