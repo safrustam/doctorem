@@ -106,7 +106,6 @@ function addPartElement(val) {
 
 function deleteElement(val) {
     tovar = tovar.filter(el => el.name !== val)
-
     localStorage.setItem('TOVAR', JSON.stringify(tovar))
     onLoad()
     openShop()
@@ -120,7 +119,6 @@ function toBasket(val, price) {
         if (!tovar) tovar = []
         tovar.push({name: val, price: price, count: 1})
     }
-
     localStorage.setItem('TOVAR', JSON.stringify(tovar))
     onLoad()
 }
@@ -132,6 +130,26 @@ function showBasketCount(count = 0) {
     basket_count.innerText = count
 }
 
+function requireValue(){
+    let error = false
+    if (!fio.value) {
+        // return alert("Поле ФИО обязательна для заполнения")
+        document.querySelector('#fio').style.border = "1px solid red"
+        document.querySelector('#fio+span').style.display = 'block'
+        error = true;
+    }
+    if (!(tel.value || email.value)) {
+        document.querySelector('#tel').style.border = "1px solid red"
+        document.querySelector('#tel+span').style.display = 'block'
+        document.querySelector('#email').style.border = "1px solid red"
+        document.querySelector('#email+span').style.display = 'block'
+        error = true;
+    }
+
+    return error
+}
+
+
 function submit() {
     let textForTelegram = "<tg-emoji emoji-id=\"5368324170671202286\">👍</tg-emoji> <b>НОВЫЙ ЗАКАЗ </b> (" +
         new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() + ")"
@@ -140,12 +158,7 @@ function submit() {
     })
     textForTelegram += '%0AК оплате: <u><b>' + summa + ' RUB</b></u>'
 
-
-    if (!fio.value) return alert("Поле ФИО обязательна для заполнения")
-    if (!(tel.value || email.value)) {
-        if (!tel.value) return alert("Поле телефон обязательна для заполнения")
-        if (!email.value) return alert("Поле email обязательна для заполнения")
-    }
+    if (requireValue()) return false;
 
     textForTelegram += '%0A%0A<b>Purchaser information:</b>'
     textForTelegram += '%0A Ф_И_О_: <pre>' + fio.value + '</pre>'
@@ -166,7 +179,7 @@ function submit() {
 
     fetch(linkTelega)
         .then(response => response.json())
-        .then(json => console.log('> > > ' + json))
+        .then(json => console.log(' все будет хорошо > > > ' + json))
 }
 
 
@@ -185,8 +198,6 @@ function toDetail(val) {
  *  буду слушать сообщения от iframe
  */
 window.addEventListener('message', function (event) {
-
-
     if (typeof event.data === 'string') {
         // перенаправляет на нужную страницу по команде из iframe menu
         document.location = event.data

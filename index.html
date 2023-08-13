@@ -54,12 +54,15 @@
 
         <label>Ф.И.О.</label>
         <label for="fio"></label><input type="text" id="fio"/>
+        <span style="color: red; display: none">Обязательное поле</span>
 
         <br><br>
         <label>Телефон</label><label for="tel"></label><input type="text" id="tel"/>
+        <span style="color: red; display: none">Обязательное поле, если не указан email</span>
 
         <br><br>
         <label>E-mail</label><label for="email"></label><input type="text" id="email"/>
+        <span style="color: red; display: none">Обязательное поле, если не указан телефон</span>
 
         <br><br>
         <label>Адрес</label><label for="address"></label><input type="text" id="address"/>
