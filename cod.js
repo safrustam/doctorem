@@ -132,71 +132,41 @@ function showBasketCount(count = 0) {
     basket_count.innerText = count
 }
 
-
-
 function submit() {
-
-console.log("tovar",tovar)
-
-    let textForTelegram = "<b>Новый заказ </b>"
-    tovar.forEach((el, index)=>{
-        textForTelegram+='<br>'+(index+1)+'. '+el.name+': '+el.price+' ('+el.price+" x "+el.count+")"
+    let textForTelegram = "<tg-emoji emoji-id=\"5368324170671202286\">👍</tg-emoji> <b>НОВЫЙ ЗАКАЗ </b> (" +
+        new Date().toLocaleDateString() + " " + new Date().toLocaleTimeString() + ")"
+    tovar.forEach((el, index) => {
+        textForTelegram += '%0A <i>' + (index + 1) + '. ' + el.name + ': ' + el.price + ' (' + el.price + " x " + el.count + ")</i>"
     })
+    textForTelegram += '%0AК оплате: <u><b>' + summa + ' RUB</b></u>'
 
-    textForTelegram+='<br>К оплате: <b>'+ summa+ ' RUB</b>'
 
-
-/////////////////////// _  _  ////////////////////////
     if (!fio.value) return alert("Поле ФИО обязательна для заполнения")
     if (!(tel.value || email.value)) {
         if (!tel.value) return alert("Поле телефон обязательна для заполнения")
         if (!email.value) return alert("Поле email обязательна для заполнения")
     }
 
-
-    textForTelegram += '<br><br><br><b>Purchaser information:</b>'
-    textForTelegram += '<br>Ф_И_О_: ' + fio.value
-    if (tel.value) textForTelegram += '<br>Phone: ' + tel.value
+    textForTelegram += '%0A%0A<b>Purchaser information:</b>'
+    textForTelegram += '%0A Ф_И_О_: <pre>' + fio.value + '</pre>'
+    if (tel.value) textForTelegram += '%0APhone: ' + tel.value
     if (email.value) {
         const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
         if (!EMAIL_REGEXP.test(email.value)) return alert('Неправильный email')
-        textForTelegram += '<br>Email: ' + email.value
+        textForTelegram += '%0AEmail: ' + email.value
     }
 
-    if (address.value) textForTelegram += '<br>Адрес: ' + address.value
-    if (index.value) textForTelegram += '<br>Индекс: ' + index.value
-
+    if (address.value) textForTelegram += '%0AАдрес: ' + address.value
+    if (index.value) textForTelegram += '%0AИндекс: ' + index.value
 
 
     let botId = 'bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8'
     let chatId = '-1001982106032'
-
-
     let linkTelega = `https://api.telegram.org/${botId}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${textForTelegram}`
-
-
-    console.log("linkTelega", linkTelega)
-
-    // let zzz = `https://api.telegram.org/bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8/sendMessage?chat_id=-1001982106032&text="попробуем\nтак "Первая%20строка.%0AВто<b>ра</b>я%20стро<i>ка</i>.%0Aеще&parse_mode=Markdown`
 
     fetch(linkTelega)
         .then(response => response.json())
-        .then(json => console.log('> > > '+json))
-
-
-/*
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-    .then(response => response.json())
-    .then(json => console.log('> > > '+json))
-*/
-/*
-    fetch(zzz)
-    .then(response => response.json())
-    .then(json => console.log('> > > '+json))
-*/
-
-    //`https://api.telegram.org/bot6398447204:AAE2eF5tLeBWy8l-sgsDV-74KgEw66P7zr8/sendMessage?chat_id=-1001982106032&text="попробуем\nтак "Первая%20строка.%0AВто<b>ра</b>я%20стро<i>ка</i>.%0Aеще&parse_mode=Markdown`
-
+        .then(json => console.log('> > > ' + json))
 }
 
 
