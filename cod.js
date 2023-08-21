@@ -1,7 +1,7 @@
 let basket, basket_count, modal_shop
 let tovar
 let fio, email, index, address, tel, products, sum
-let goToTop
+let goToTop, sbmit
 
 let summa = 0
 const enumImg = {
@@ -22,6 +22,7 @@ function onLoad() {
     products = products || document.querySelector('#products')
     sum = sum || document.querySelector('#sum')
     goToTop = goToTop || document.querySelector('#go-to-top')
+    sbmit= sbmit || document.querySelector('[onclick="submit()"]')
 
 
     fio = fio || document.querySelector('#fio')
@@ -54,7 +55,7 @@ function openShop() {
     modal_shop.style.display = 'block'
     setTimeout(() => modal_shop.style.opacity = '1')
     let template = '';
-
+    summa = 0
     tovar.forEach(el => {
         template +=
             `<div class="product">
@@ -177,17 +178,17 @@ function submit() {
     let chatId = '-1001982106032'
     let linkTelega = `https://api.telegram.org/${botId}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${textForTelegram}`
 
-    document.querySelector('[onclick="submit()"]').style.pointerEvents = 'none'
-    document.querySelector('[onclick="submit()"]').style.opacity = 0.2
+    sbmit.style.pointerEvents = 'none'
+    sbmit.style.opacity = '0.2'
 
     fetch(linkTelega)
         .then(response => response.json())
         .then(json => {
-            console.log('  > > > ' + json)
+            console.log('  >>>  > > > ' + json)
 
             setTimeout(() => {
-                document.querySelector('[onclick="submit()"]').style.pointerEvents = 'initial'
-                document.querySelector('[onclick="submit()"]').style.opacity = 1
+                sbmit.style.pointerEvents = 'initial'
+                sbmit.style.opacity = '1'
             }, 10000)
         })
 
