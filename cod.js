@@ -130,7 +130,7 @@ function showBasketCount(count = 0) {
     basket_count.innerText = count
 }
 
-function requireValue(){
+function requireValue() {
     let error = false
     if (!fio.value) {
         // return alert("Поле ФИО обязательна для заполнения")
@@ -177,9 +177,20 @@ function submit() {
     let chatId = '-1001982106032'
     let linkTelega = `https://api.telegram.org/${botId}/sendMessage?chat_id=${chatId}&parse_mode=HTML&text=${textForTelegram}`
 
+    document.querySelector('[onclick="submit()"]').style.pointerEvents = 'none'
+    document.querySelector('[onclick="submit()"]').style.opacity = 0.2
+
     fetch(linkTelega)
         .then(response => response.json())
-        .then(json => console.log(' все будет хорошо > > > ' + json))
+        .then(json => {
+            console.log('  > > > ' + json)
+
+            setTimeout(() => {
+                document.querySelector('[onclick="submit()"]').style.pointerEvents = 'initial'
+                document.querySelector('[onclick="submit()"]').style.opacity = 1
+            }, 10000)
+        })
+
 }
 
 
